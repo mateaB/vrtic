@@ -78,7 +78,7 @@ section {
 
 
 .navigacija{
-	background-color:transparent;
+	background-color: #afcecf;
 	font-weight: bold;
 	color: #fff;
 }
@@ -91,17 +91,18 @@ section {
 	color: #FFFF00;
 	display: block;
 	vertical-align: center;
+	height: 500px;
 }
 
 .poravnanje{
-	 margin-top:50px;
-	 margin-bottom:30px;
+	margin-top: 100px;
+	margin-bottom: 130px;  
 	text-transform:none;
+	vertical-align: center;
 }
 
 #o_nama img{
 	padding-left: 0px;
-
 }
 
 #o_nama .gumb{
