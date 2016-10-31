@@ -92,9 +92,9 @@ section {
 }
 
 .poravnanje{
-	margin-top: 100px;
-	margin-bottom: 130px;  
-	text-transform:none;
+	margin-top: 60px;
+	margin-bottom: 50px;  
+	text-transform: none;
 	vertical-align: center;
 }
 
@@ -102,7 +102,6 @@ section {
 	margin-top: 70px;
 	margin-left: 150px;
 	width: 100%;
-
 }
 
 #o_nama .gumb{
@@ -120,10 +119,11 @@ section {
     outline: 0;
 }
 
-#programi .gumb-2{
-  border: 1px solid #FFFF00;
+#statistika .gumb-2{
+  border: 1px solid #ffffff;
   cursor: pointer;
-  
+  top: 0px;
+  margin-bottom: 40px;
 }
 
 .gumb-2:visited {
@@ -136,7 +136,7 @@ section {
 .gumb-2:focus,
 .gumb-2:active,
 .gumb-2.active {
-    border: solid 1px #;
+    border: solid 1px #ffffff;
     color: #33CC33;
     background: transparent;
 }
@@ -184,3 +184,10 @@ section {
 		padding: 0px;
 }
 
+#chartContainer {
+	background-size: cover;
+	width: 50%;
+	height: 50%;
+	margin-bottom: 25px;
+	margin-right: 0px;
+}

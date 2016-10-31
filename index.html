@@ -4,7 +4,11 @@
 	<title> Dječji vrtić "Vladimir Nazor" Daruvar </title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+
 	<script src="js/creative.js"> </script>
+	<script type="text/javascript" src="js/canvasjs.min.js"> </script> 
+
+
 	<meta charset="utf-8"> <!--podrzava hrvatski -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- -->
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- da se može koristiti i na mobu -->
@@ -72,13 +76,15 @@
 	 <section id="statistika">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-lg-offset-1 col-sm-push-6 col-sm-6">
+				<div id="chartContainer"></div>
+							
+				<div class="col-lg-4 col-lg-offset-1 col-sm-push-6 col-sm-6">
 					<p class="poravnanje"> Djeca su raspoređena u 10 skupina redovitog cjelodnevnog programa- 4 jasličke i 6 vrtićkih skupina. <br><br>
 					Ciljevi vrtića su provođenje predškolskog odgoja koji se organizira i provodi za djecu od navršenih 6 mjeseci života do polaska u osnovnu školu. </p>
-				</div>
-				<div class="col-lg-5 col-sm-pull-6"> <img class="img-responsive" src="img/raspodjela.png"/>
-													<a href="" class="btn btn-lg gumb-2"> Saznaj više starosnim grupama </a>
-				</div>
+				<!-- <img class="img-responsive" src="img/raspodjela.png"/> -->		
+					<a href="" class="btn btn-lg gumb-2"> Saznaj više starosnim grupama </a>
+					</div>
+
 			</div>
 		</div>
 	</section>
@@ -128,18 +134,10 @@
     	</section>
 
    
-
+<!--
 	<section id="upis"> 
-			<h1> FOR MY BOYFRIEND </h1>
-
-			<button onclick= upali() > Ugašeno je! Jel te strah? Upali mlakonjoo!! </button>
-
-			<img id="myImage" src='http://www.w3schools.com/js/pic_bulboff.gif' style="width:100px">
-
-			<button onclick= ugasi() > Idem spavati! Ugasi svijetlooo </button>
-
-
-	</section> 
+		
+	</section> -->
 
 	<footer id="kontakt">
 		<div class="container">
