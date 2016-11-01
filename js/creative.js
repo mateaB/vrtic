@@ -61,7 +61,7 @@ function promijeni(field) {
 		counter = counter + 1;
 		if(counter === 9){
 			document.getElementById("na-redu").innerHTML = "";
-			var ponovno= prompt("Sva su polja popunjena! Želiš li pokušati ponovno? (da/ne)");
+			var ponovno= prompt("Sva su polja popunjena! Želiš li pokušati ponovno? (da/ne)", "da");
 			if(ponovno === "da"){
 				Resetiraj();
 			}
