@@ -35,3 +35,37 @@ window.onload = function () {
 	});
 	chart.render();
 }
+
+var counter = 0;
+function promijeni(field) {
+	var current_field = document.getElementById(field);
+	if (current_field.className == "field-changed") {
+		document.getElementById("error").innerHTML = "Vec popunjeno!"
+	} else {
+		if (counter % 2 == 0) {
+			current_field.src = "img/krizic.png";
+			current_field.className = "field-changed";
+			document.getElementById("na-redu").innerHTML = "Na redu: X";
+			document.getElementById("error").innerHTML = "";
+		}
+		else{
+			current_field.src = "img/krug.png";
+			current_field.className = "field-changed";
+			document.getElementById("na-redu").innerHTML = "Na redu: Krug";
+			document.getElementById("error").innerHTML = "";
+		}
+		counter = counter + 1;
+	}
+};
+
+function Resetiraj() {
+	document.getElementById("error").innerHTML = "";
+	var x = document.getElementsByClassName("field-changed");
+	var i;
+	for (i = 0; i < x.length; ) {
+		debugger;
+		x[i].src = "img/kk-blank.png";
+		x[i].className = "field";
+		debugger;
+	};
+}
