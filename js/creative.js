@@ -37,8 +37,6 @@ window.onload = function () {
 }
 
 var counter = 0;
-var krug;
-var krizic;
 function promijeni(field) {
 	var current_field = document.getElementById(field);
 	if (current_field.className == "field-changed") {
@@ -47,25 +45,26 @@ function promijeni(field) {
 		if (counter % 2 == 0) {
 			current_field.src = "img/krizic.png";
 			current_field.className = "field-changed";
-			krizic = true;
+			current_field.value = "X";
 			document.getElementById("na-redu").innerHTML = "Na redu: O";
 			document.getElementById("error").innerHTML = "";
 		}
 		else{
 			current_field.src = "img/krug.png";
 			current_field.className = "field-changed";
-			krug = true;
+			current_field.value = "O";
 			document.getElementById("na-redu").innerHTML = "Na redu: X";
 			document.getElementById("error").innerHTML = "";
 		}
 		counter = counter + 1;
 		if(counter === 9){
 			document.getElementById("na-redu").innerHTML = "";
-			var ponovno= prompt("Sva su polja popunjena! Želiš li pokušati ponovno? (da/ne)", "da");
-			if(ponovno === "da"){
+			var ponovno= confirm("Sva su polja popunjena! Želiš li pokušati ponovno?");
+			if(ponovno === true){
 				Resetiraj();
 			}
 		}
+		checkVictory();
 	}
 };
 
@@ -77,16 +76,69 @@ function Resetiraj() {
 	for ( var i = 0; i < x.length; ) {
 		x[i].src = "img/kk-blank.png";
 		x[i].className = "field";
+		x[i].value = "";
 	};
 }
 
 
-function Rezultat(){
-	if(f1 === krug && f2 === krug && f3 === krug){
-		alert("Pobijedaa!!");
-		var ponovno= prompt("Želiš li pokušati ponovno? (da/ne)");
-			if(ponovno === "da"){
+
+function checkVictory() {  
+			if(f1.value === "X" && f2.value === "X" && f3.value === "X") {
+                    victory();
+                }
+                if(f1.value === "X" && f5.value  === "X" && f9.value === "X") {
+                    victory();
+                }
+                if(f3.value === "X" && f5.value === "X" && f7.value === "X") {
+                    victory();
+                }
+                if(f4.value === "X" && f5.value === "X" && f6.value === "X") {
+                    victory();
+                }
+                if(f7.value === "X" && f8.value === "X" && f9.value === "X") {
+                    victory();
+                }
+                if(f1 === "X" && f4.value === "X" && f7.value === "X") {
+                    victory();
+                }
+                if(f2.value  === "X" && f5.value === "X" && f8.value === "X") {
+                    victory();
+                }
+                if(f3.value === "X" && f6.value === "X" && f9.value === "X") {
+                    victory();
+                }
+                if(f1 === "O" && f2.value  === "O" && f3.value === "O") {
+                    defeat();
+                }
+                if(f1 === "O" && f5.value === "O" && f9.value === "O") {
+                    victory();
+                }
+                if(f3.value === "O" && f5.value === "O" && f7.value === "O") {
+                    defeat();
+                }
+                if(f4.value === "O" && f5.value === "O" && f6.value === "O") {
+                    defeat();
+                }
+                if(f7.value === "O" && f8.value === "O" && f9.value === "O") {
+                    defeat();
+                }
+                if(f1 === "O" && f4.value === "O" && f7.value === "O") {
+                    defeat();
+                }
+                if(f2.value  === "O" && f5.value === "O" && f8.value === "O") {
+                    defeat();
+                }
+                if(f3.value === "O" && f6.value === "O" && f9.value === "O") {
+                    defeat();
+                }
+            }
+
+ function victory() {
+                alert('Pobijedio je križić!');
 				Resetiraj();
-			};
-	}
-}
+            }
+
+function defeat() {
+                alert("Pobijedio je kružić!");
+                Resetiraj();
+            }
