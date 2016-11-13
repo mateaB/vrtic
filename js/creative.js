@@ -19,7 +19,7 @@ window.onload = function () {
 			type: "pie",       
 			indexLabelFontFamily: "Garamond",       
 			indexLabelFontSize: 15,
-			indexLabel: "{label} {y}%",
+			indexLabel: " {y}%",
 			startAngle:-10,      
 			showInLegend: true,
 			toolTipContent:"{legendText} {y}",
