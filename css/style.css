@@ -155,8 +155,8 @@ section {
 }
 
 #kontakt {
-	background-color: #FFFF00;
-	color: #33CC33;
+	background-color:#ffffff;
+	color: #990000;
 	text-align: center;
 	padding: 20px 20px 20px 20px;
 }
@@ -166,10 +166,10 @@ section {
 }
 
 .zavrsni{  
-	color: #FFFF00;
+	color: #ffffff;
 	text-align: center;
 	position: relative;    
-    background-color: #33CC33;
+    background-color: #990000;
     padding: 10px 0;
 }
 
@@ -182,14 +182,6 @@ section {
 
 #galerija .col-sm-3{
 	padding: 0px;
-}
-
-#chartContainer {
-	background-size: cover;
-	width: 50%;
-	height: 50%;
-	margin-bottom: -10px;
-	margin-right: 0px;
 }
 
 
@@ -271,7 +263,7 @@ img {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    background: #990000;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
